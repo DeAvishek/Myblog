@@ -49,13 +49,13 @@ export class Authservice {
     async getCurruser() {
         try {
             // Attempt to fetch current session (check if the user is authenticated)
-            const session = await this.account.getSession('current');
+            // const session = await this.account.getSession('current');
             
-            // If there's no active session, prompt the user to log in again
-            if (!session) {
-                console.log("User is not logged in.");
-                return null; // Handle this case (maybe redirect to login or show message)
-            }
+            // // If there's no active session, prompt the user to log in again
+            // if (!session) {
+            //     console.log("User is not logged in.");
+            //     return null; // Handle this case (maybe redirect to login or show message)
+            // }
     
             // Session exists, fetch the user account information
             return await this.account.get();
